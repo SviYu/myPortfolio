@@ -838,7 +838,7 @@
   margin-bottom: 2rem;
 }
 .project-content .project-text-wrapper .project-text {
-  min-height: 74px;
+  min-height: 10rem;
   text-justify: auto;
 }
 .project-content .project-btns {
