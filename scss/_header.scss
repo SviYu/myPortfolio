@@ -1,0 +1,192 @@
+.header{
+    padding: 0 2rem !important;
+    height: 100vh;
+    background: linear-gradient(315deg,
+    rgba(color(primary), 0.8) 0%,
+    rgba(color(secondary), 0.5) 100%), url(../images/header-bg.jpg) center no-repeat;
+    background-size:cover;
+    color: color(white);
+    position: relative;
+    @include response(lg) {
+        padding: 0 6rem !important;
+    }
+    
+    &-text {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            align-items: flex-end;
+            padding: 0 2rem 0 0;
+                @include response(lg) {
+                    padding-right: 6rem !important;
+                }
+
+                &-name {
+                    text-align: center;
+                    font-size: size(xl) + 2;
+                    font-family: $font-baskerville;
+                    letter-spacing: .8rem;
+                    color: transparent;
+                    text-transform: uppercase;
+                    position: relative;
+                    user-select: none;
+        
+                    & span:nth-child(1),
+                    & span:nth-child(2) {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        color: color(white);
+                        transition: 0.5s;
+                        overflow: hidden;
+                    }
+        
+                    & span:nth-child(1) {
+                        clip-path: polygon(0 0, 100% 0%, 100% 50%, 0 50%);
+                    }
+        
+                    & span:nth-child(2) {
+                        clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+                    }
+        
+                    & span:nth-child(3) {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        font-family: $font-handlee;
+                        transform: translate(-50%, -50%);
+                        opacity: 0;
+                        transition: opacity 350ms ease;
+                        font-size: size(xs);
+                        color: #fff;
+                        background: color(contrast);
+                        width: 97.5%;
+                        text-align: center;
+                        letter-spacing: 0.5rem;
+                        padding-top: .3rem;
+
+        
+                         @include response(lg) {
+                            font-size: size(lg);
+                        }
+        
+                       
+                    }
+        
+                    @include response(md) {
+                        font-size: size(xl) + 4;
+                        letter-spacing: 0.3rem;
+                        margin-top: -1.5rem;
+                    }
+                    @include response(lg) {
+                        font-size: size(xl) + 6;
+                        letter-spacing: 0.3rem;
+                        margin-top: -1.5rem;
+                    }
+        
+                }
+    }
+}
+.main-links {
+    list-style-type: none;
+    display: flex;
+
+    &-item {
+        margin-top: 3rem;
+        &-link {
+            font-size: size(md);
+            margin: 0 0 0 3rem;
+            color: color(white);
+            transition: all .3s;
+
+            @include response(md){
+                font-size: size(xl);
+            }
+
+            &:hover {
+                color: color(contrast);
+            }
+        }
+    }
+}
+/* HOVER NAME EFFECT */
+.header-text:hover span:nth-child(1) {
+    transform: translateY(-1rem);
+}
+
+.header-text:hover span:nth-child(2) {
+    transform: translateY(1rem);
+}
+
+.header-text:hover span:nth-child(3) {
+    transition: opacity .7s ease;
+    opacity: 1;
+}
+/* ANIMATION */
+.header-text-name span:nth-child(1) {
+    @include response(xs) {
+        animation: topPart 1s;
+        animation-fill-mode: forwards;
+        animation-delay: 1s;
+
+        @keyframes topPart {
+            from {
+                transform: none;
+            }
+
+            to {
+                transform: translateY(-1rem);
+            }
+        }
+    }
+    @include response(md) {
+        animation: none;
+    }
+}
+
+.header-text-name span:nth-child(2) {
+    @include response(xs) {
+        animation: bottomPart 1s;
+        animation-fill-mode: forwards;
+        animation-delay: 1s;
+
+        @keyframes bottomPart {
+            from {
+                transform: none;
+            }
+
+            to {
+                transform: translateY(1rem);
+            }
+        }
+    }
+    @include response(md) {
+        animation: none;
+    }
+}
+
+.header-text-name span:nth-child(3) {
+    @include response(xs) {
+        animation: textAppear 1s;
+        animation-fill-mode: forwards;
+        animation-delay: 1s;
+
+        @keyframes textAppear {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    }
+    @include response(md){
+        animation: none;
+    }
+}

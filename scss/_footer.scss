@@ -1,0 +1,24 @@
+.footer{
+    padding: 1rem 2rem !important;
+    color: color(white);
+    width: 100%;
+    background-color: color(secondary);
+    font-family: $font-handlee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include response(lg) {
+        padding: 2rem 6rem !important;
+    }
+    &-logo-img{
+        @extend .navbar-logo-img;
+    }
+    &-right{
+        text-align: center;
+        font-size: size(sm);
+        &-text{
+            margin: 0;
+        }
+    }
+}

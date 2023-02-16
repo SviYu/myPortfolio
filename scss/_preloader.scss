@@ -1,0 +1,64 @@
+
+#preloader {
+    background-color: #000;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    display: flex;
+}
+
+.loading {
+    @include flexLayout;
+
+    & span {
+        display: inline-block;
+        vertical-align: middle;
+        width: 1.5rem;
+        height: 1.5rem;
+        margin: 1rem;
+        background: #FFE0E8;
+        border-radius: 50%;
+        animation: loading 1s infinite alternate;
+    }
+}
+
+.loading span:nth-of-type(2) {
+    background: color(pink);
+    animation-delay: .2s;
+}
+
+.loading span:nth-of-type(3) {
+    background: #FF5770;
+    animation-delay: .4s;
+}
+
+.loading span:nth-of-type(4) {
+    background: #E3428C;
+    animation-delay: .6s;
+}
+
+.loading span:nth-of-type(5) {
+    background: #C32DA7;
+    animation-delay: .8s;
+}
+
+.loading span:nth-of-type(6) {
+    background: color(darkpink);
+    animation-delay: 1s;
+}
+
+.loading span:nth-of-type(7) {
+    background: #6502DE;
+    animation-delay: 1.2s;
+}
+
+@keyframes loading {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

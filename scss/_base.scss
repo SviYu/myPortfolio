@@ -1,0 +1,72 @@
+$font-openSans: 'Open Sans', sans-serif;
+$font-handlee: 'Handlee', cursive;
+$font-baskerville: 'Baskerville', serif;
+
+
+
+$colors: (
+    primary: #181818,
+    secondary: #393E46,
+    contrast: #00ADB5,
+    darkcontrast: #022731,
+    white: #EEEEEE
+);
+
+@function color($color-name) {
+    @return map-get($colors, $color-name)
+}
+
+$font-sizes: (
+    xl: 3rem,
+    lg: 2.5rem,
+    md: 2rem,
+    sm: 1.8rem,
+    xs: 1.6rem
+);
+
+@function size($size) {
+    @return map-get($font-sizes, $size)
+};
+
+@mixin flexLayout{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin response($breakpoint) {
+    @if($breakpoint == xs) {
+        @media(min-width: 320px) {
+            @content;
+        }
+    }
+    @if($breakpoint == sm) {
+        @media(min-width: 480px) {
+            @content;
+        }
+    }
+
+    @if($breakpoint == md) {
+        @media(min-width: 768px) {
+            @content
+        }
+    }
+
+    @if($breakpoint == lg) {
+        @media(min-width: 1024px) {
+            @content
+        }
+    }
+
+    @if($breakpoint == xl) {
+        @media(min-width: 1200px) {
+            @content
+        }
+    }
+
+    @if($breakpoint == xxl) {
+        @media(min-width: 1920px) {
+            @content
+        }
+    }
+}

@@ -1,0 +1,123 @@
+.previous-link:hover .previous-arrow {
+    visibility: visible;
+    opacity: 1;
+    padding-right: 1rem;
+}
+
+.previous-arrow {
+    color: color(white);
+    font-size: size(md);
+    transition: all .4s;
+    visibility: hidden;
+    opacity: 0;
+
+    @include response(md) {
+        &:hover{
+            visibility: visible;
+            opacity: 1;
+            padding-right: 1rem;
+        }
+    }
+}
+.previous-link {
+    @extend .menu-list-item-link;
+}
+.projects{
+    max-width: 100rem;
+    height: 100vh;
+    padding: 12rem 2rem;
+    margin: 0 auto;
+    
+    &-title{
+        @extend .text-title;
+        margin-bottom: 5rem;
+        color: color(white);
+        text-align: center;
+    }
+}
+.project{
+    width: 100%;
+    font-size: size(sm);
+    font-family: $font-openSans;
+    color: color(white);
+    background-color: rgba(color(darkcontrast), .97);
+    padding: 3rem;
+    @include response(md){
+        display: flex !important;
+        
+        
+    }
+
+    &-photo{
+        width: 100%;
+        margin-bottom: 2rem;
+            @include response(md) {
+                width: 40%;
+                object-fit: contain;
+            }
+    }
+    &-content{
+        @include response(md) {
+                width: 55%;
+                margin-left: 5%;
+            }
+        .project-text-wrapper{
+            .project-title{
+                font-size: size(lg);
+                text-align: center;
+                margin-bottom: 2rem;
+            }
+            .project-text{
+                min-height: 74px;
+                text-justify: auto;
+            }
+        }
+        .project-btns{
+            text-align: center;
+            margin: 4rem 0 2rem;
+            .project-btn{
+                font-family: $font-openSans;
+                text-decoration: none;
+                text-transform: uppercase;
+                color: color(white);
+                font-size: size(xs);
+                position: relative;
+                cursor: pointer;
+                border: 1px solid color(contrast);
+                padding: .5rem 1rem;
+                margin: 1rem;
+                transition: all .2s;
+            
+                &:hover {
+                    color: color(contrast);
+                }
+            }
+        }
+    }
+}
+
+/* SWIPER STYLE */ 
+.swiper {
+    margin: 0 auto;
+    width: 100%;
+    height: 60vh;
+
+    @include response(xs) {
+        height: fit-content;
+    }
+}
+.swiper-pagination{
+    margin-bottom: 1.5rem;
+}
+.swiper-pagination-progressbar.swiper-pagination-horizontal {
+    bottom: 0 !important;
+}
+
+.swiper-pagination-bullet {
+    background-color: color(contrast) !important;
+}
+/* disabled links */
+a.disabled {
+    pointer-events: none;
+    cursor: default;
+}

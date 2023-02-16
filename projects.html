@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- js -->
+    <script src="https://cdn.lordicon.com/qjzruarw.js" defer></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js" defer></script>
+    <script src="js/projects.js" defer></script>
+    <!-- aos -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville&display=swap" rel="stylesheet">
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/a7e8d46863.js" crossorigin="anonymous"></script>
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.svg">
+    <link rel="import" href="index.html">
+    <title>Projects</title>
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader" class="loading">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="index.html" class="navbar-logo">
+            <img src="images/Logo-top.svg" alt="" class="navbar-logo-img">
+        </a>
+        <div class="progress-container">
+            <div id="myBar" class="progress-bar"></div>
+        </div>
+        <div class="navbar-menu" id="navbarMenu">
+            <a class="previous-link" href="index.html"><i class="fa-solid fa-arrow-left-long previous-arrow"></i>Back</a>
+        </div>
+    </nav>
+
+    <!-- Projects -->
+    <main id="projects" class="projects">
+        <h3 class="projects-title">My Projects</h3>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide project">
+                    <img class="project-photo" src="images/smuknu-project.jpg" alt="Smuknu Project" >
+                    <div class="project-content">
+                        <div class="project-text-wrapper">
+                            <p class="project-title">Smuknu</p>
+                            <p class="project-text">Project is made in React JS with REST API.</p>
+                        </div>
+                        <div class="project-btns">
+                            <a class="project-btn" href="https://sviyu.github.io/smuknu" target="_blank">
+                                View page
+                            </a>
+                            <a class="project-btn" href="https://github.com/SviYu/smuknu.git" target="_blank">
+                                View code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide project">
+                    <img class="project-photo" src="images/podcast-project.jpg" alt="Podcast Project">
+                    <div class="project-content">
+                        <div class="project-text-wrapper">
+                            <p class="project-title">Podcast</p>
+                            <p class="project-text">
+                                HTML, CSS, JS, Bootstrap, Swiper JS (in process).</p>
+                        </div>
+                        <div class="project-btns">
+                            <a class="project-btn" href="https://sviyu.github.io/podcast/" target="_blank">
+                                View page
+                            </a>
+                            <a class="project-btn" href="https://github.com/SviYu/podcast.git" target="_blank">
+                                View code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide project">
+                    <img class="project-photo" src="images/malfoto-project.jpg" alt="Mal-Foto Project">
+                    <div class="project-content">
+                        <div class="project-text-wrapper">
+                            <p class="project-title">Mal-Foto Project</p>
+                            <p class="project-text">
+                                WordPress website for one of the best wedding photographers in Denmark</p>
+                        </div>
+                        <div class="project-btns">
+                                <a class="project-btn" href="https://mal-foto.dk/" target="_blank">
+                                    View page
+                                </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide project">
+                    <img class="project-photo" src="images/TCS-project.jpg" alt="TCS Project">
+                    <div class="project-content">
+                        <div class="project-text-wrapper">
+                            <p class="project-title">Tiny Cozy Store Project</p>
+                            <p class="project-text">
+                                This Shopify web-shop was created from the scratch in collaboration with another web-developer and CEO-specialist .</p>
+                        </div>
+                        <div class="project-btns">
+                                <a class="project-btn" href="https://tinycozystore.dk/" target="_blank">
+                                    View page
+                                </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide project">
+                    <img class="project-photo" src="images/creativity-project.jpg" alt="Creativity Project">
+                    <div class="project-content">
+                        <div class="project-text-wrapper">
+                            <p class="project-title">The Creativity Project</p>
+                            <p class="project-text">
+                                Coming soon...</p>
+                        </div>
+                        <div class="project-btns">
+                            <a class="project-btn disabled" href="#">
+                                View page
+                            </a>
+                            <a class="project-btn disabled" href="#">
+                                View code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-logo">
+            <a href="#projects">
+                <img src="images/Logo-bottom.svg" alt="Logo" class="footer-logo-img">
+            </a>
+        </div>
+        <div class="footer-right">
+            <p class="footer-right-text"><span id="year"></span> All By Myself</p>
+        </div>
+    </footer>
+    <!-- End of Footer -->
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            grabCursor: true,
+            effect: "creative",
+            creativeEffect: {
+                prev: {
+                    shadow: true,
+                    translate: [0, 0, -400],
+                },
+                next: {
+                    translate: ["100%", 0, 0],
+                },
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                dynamicBullets: true,
+            },
+        });
+    </script>
+    <!-- AOS -->
+    <script>
+        AOS.init({
+            duration: 1800,
+        });
+    </script>
+
+</body>
+</html>
