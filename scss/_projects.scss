@@ -74,7 +74,7 @@
         }
         .project-btns{
             text-align: center;
-            margin: 4rem 0 2rem;
+            margin-bottom: 3rem;
             .project-btn{
                 font-family: $font-openSans;
                 text-decoration: none;
@@ -107,15 +107,21 @@
     }
 }
 .swiper-pagination{
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+}
+.swiper-pagination-fraction{
+    color: color(white) !important;
+    font-family: $font-handlee;
+    font-size: size(xs);
 }
 .swiper-pagination-progressbar.swiper-pagination-horizontal {
     bottom: 0 !important;
 }
 
-.swiper-pagination-bullet {
+/* .swiper-pagination-bullet {
     background-color: color(contrast) !important;
-}
+} */
+
 /* disabled links */
 a.disabled {
     pointer-events: none;

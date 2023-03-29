@@ -843,7 +843,7 @@
 }
 .project-content .project-btns {
   text-align: center;
-  margin: 4rem 0 2rem;
+  margin-bottom: 3rem;
 }
 .project-content .project-btns .project-btn {
   font-family: "Open Sans", sans-serif;
@@ -875,17 +875,22 @@
 }
 
 .swiper-pagination {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.swiper-pagination-fraction {
+  color: #EEEEEE !important;
+  font-family: "Handlee", cursive;
+  font-size: 1.6rem;
 }
 
 .swiper-pagination-progressbar.swiper-pagination-horizontal {
   bottom: 0 !important;
 }
 
-.swiper-pagination-bullet {
-  background-color: #00ADB5 !important;
-}
-
+/* .swiper-pagination-bullet {
+    background-color: color(contrast) !important;
+} */
 /* disabled links */
 a.disabled {
   pointer-events: none;
